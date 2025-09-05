@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çok Dilli Flash Kart Uygulaması</title>
+
+  <!-- ✅ CSS BAĞLANTISI -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📚 Çok Dilli Flash Kart Uygulaması</h1>
+    <div class="controls">
+      <select id="languageSelect">
+        <option value="en_US">English (US)</option>
+        <option value="en_UK">English (UK)</option>
+        <option value="de">Deutsch</option>
+        <option value="nl">Nederlands</option>
+        <option value="tr" selected>Türkçe</option>
+      </select>
+
+      <select id="categorySelect">
+        <option value="all">Tüm Kategoriler</option>
+        <option value="animals">Hayvanlar</option>
+        <option value="objects">Nesneler</option>
+        <option value="food">Yiyecekler</option>
+        <option value="custom">Kendi Kartlarım</option>
+      </select>
+
+      <button id="startQuizBtn">🧠 Quiz Modu</button>
+      <button id="toggleTheme">🌗 Tema Değiştir</button>
+      <button id="musicBtn">🎵 Müzik</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Normal mod -->
+    <section id="cardContainer" class="card-container"></section>
+    <section id="optionsContainer" class="options-container"></section>
+    <section id="messageBox" class="message-box"></section>
+
+    <!-- Quiz panel -->
+    <section id="quizPanel" class="quiz-panel hidden">
+      <div class="quiz-info">
+        <p>⏱ Süre: <span id="quizTime">30</span>s</p>
+        <p>✅ Doğru: <span id="quizCorrect">0</span></p>
+        <p>❌ Yanlış: <span id="quizWrong">0</span></p>
+        <p>🏆 Puan: <span id="quizPoints">0</span></p>
+      </div>
+      <div id="quizCardContainer" class="card-container"></div>
+      <div id="quizOptionsContainer" class="options-container"></div>
+      <div id="quizMessageBox" class="message-box"></div>
+    </section>
+
+    <section class="stats">
+      <p>✅ Doğru: <span id="correctCount">0</span> | ❌ Yanlış: <span id="wrongCount">0</span></p>
+      <p>🎯 Günlük Hedef: <span id="goalCount">0</span> kelime</p>
+      <p>🏆 Puan: <span id="points">0</span></p>
+    </section>
+
+    <section class="favorites-section">
+      <button id="viewFavoritesBtn">⭐ Favori Kartları Gör</button>
+    </section>
+
+    <section class="add-card-form">
+      <h3>📌 Kendi Kartını Ekle</h3>
+      <input type="text" id="customTr" placeholder="Türkçe Anlamı" />
+      <input type="text" id="customEn" placeholder="İngilizce Karşılığı" />
+      <input type="text" id="customCategory" placeholder="Kategori (ör: animals)" />
+      <input type="text" id="customExample" placeholder="Örnek Cümle (İngilizce)" />
+      <input type="url" id="customImage" placeholder="Resim URL'si" />
+      <button id="addCardBtn">➕ Kart Ekle</button>
+    </section>
+  </main>
+
+  <footer>
+    <button id="pronounceBtn">🔊 Telaffuz Et</button>
+    <p>© 2025 Çok Dilli Flash Kart Uygulaması</p>
+  </footer>
+
+<script src="data.js"></script>
+<script src="sound.js"></script>
+<script src="stat.js"></script>
+<script src="themes.js"></script>
+<script src="swipe.js"></script>
+<script src="bonus.js"></script>
+<script src="scrpit.js"></script>
+</body>
+</html>
+

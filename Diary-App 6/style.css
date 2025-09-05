@@ -1,0 +1,181 @@
+:root {
+  --primary: #0044cc;
+  --success: #28a745;
+  --danger: #dc3545;
+  --bg-light: #f9f9f9;
+  --bg-dark: #121212;
+  --text-light: #222;
+  --text-dark: #eee;
+  --highlight: #ffcc00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+select, button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s;
+}
+
+button:active { transform: scale(0.98); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.card-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 1.5rem auto;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+body.dark .card { background: #1f1f1f; }
+
+.card img { max-width: 220px; margin-bottom: 0.8rem; }
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.option-card {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.option-card:hover { opacity: 0.9; }
+
+.message-box {
+  text-align: center;
+  font-size: 1.1rem;
+  min-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats {
+  text-align: center;
+  margin: 1rem auto 1.2rem;
+  font-size: 0.95rem;
+}
+
+.favorites-section { text-align: center; margin-bottom: 1rem; }
+
+.add-card-form {
+  background: #f3f3f3;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 420px;
+  margin: 1.5rem auto 2.5rem;
+}
+body.dark .add-card-form { background: #202020; }
+
+.add-card-form input {
+  display: block;
+  width: 100%;
+  padding: 0.65rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.add-card-form button {
+  width: 100%;
+  background: var(--success);
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#pronounceBtn {
+  background: white;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Toast */
+.toast-message {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--highlight);
+  color: #222;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Quiz Panel */
+.hidden { display: none; }
+
+.quiz-panel {
+  max-width: 420px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+body.dark .quiz-panel { background: #1f1f1f; }
+
+.quiz-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
